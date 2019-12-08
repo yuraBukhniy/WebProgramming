@@ -1,0 +1,206 @@
+﻿<html>
+	<head>
+		<title>Lab 1-8</title>
+		<link rel="stylesheet" href="main.css">
+		<script src="scripts/CheckForm.js"></script>
+   		<script src="scripts/script_for_ticket_page.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<nav id="menu">
+			<ul class="menulist">
+				<li class="item"><a href="index.html">Головна</a></li>
+				<li class="item"><a href="#">Квитки</a>
+					<ul class="submenu">
+						<li><a href="routes.html">Купити</a></li>
+						<li><a href=#>Меню 1</a></li>
+						<li><a href=#>Меню 2</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="contact.html">Контакти</a></li>
+				<li class="item"><a href="#">Про нас</a></li>
+			</ul>
+			<div id="menu_less600">
+				<img id="menuicon" src="img/menu.png">
+				<ul class="menulist_less600">
+					<li><a href="index.html" class='items_less600'>Головна</a></li>
+					<li><a href="#" class='items_less600'>Квитки</a></li>
+						<li><a href="tickets.html" class="subitems_less600">Купити</a></li>
+						<li><a href="#" class="subitems_less600">Меню 1</a></li>
+						<li><a href="#" class="subitems_less600">Меню 2</a></li>
+					<li><a href="#" class='items_less600'>Контакти</a></li>
+					<li><a href="#" class='items_less600'>Про нас</a></li>
+				</ul>
+			</div>
+			<div id="theme">
+				<b>Змінити тему</b>
+			</div>
+			</nav>
+
+			<div id="title"></div>
+			
+			<div id="content-tickets">
+				<br>
+				<h2><b>Доступні маршрути</b></h2>
+				<p>
+					<table id="some_table" border>
+						<tr>
+							<th>Напрямок</th>
+							<th>Ціна</th>
+							<th>День відправлення</th>
+							<th>Час відправлення</th>
+						</tr>
+						<tr>
+							<td>Львів-Київ</td>
+							<td>300 грн</td>
+							<td>7 грудня</td>
+							<td>13:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Ужгород</td>
+							<td>100 грн</td>
+							<td>5 грудня</td>
+							<td>13:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Вінниця</td>
+							<td>250 грн</td>
+							<td>6 грудня</td>
+							<td>10:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Одеса</td>
+							<td>400 грн</td>
+							<td>4 грудня</td>
+							<td>12:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Дніпро</td>
+							<td>500 грн</td>
+							<td>8 грудня</td>
+							<td>09:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Чернівці</td>
+							<td>150 грн</td>
+							<td>7 грудня</td>
+							<td>10:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Хмельницький</td>
+							<td>150 грн</td>
+							<td>5 грудня</td>
+							<td>12:00</td>
+						</tr>
+						<tr>
+							<td>Львів-Харків</td>
+							<td>600 грн</td>
+							<td>9 грудня</td>
+							<td>08:00</td>
+						</tr>
+					</table>
+				</p>
+			</div>
+			
+			<div id="form">
+				<p>
+					<h2>Щоб замовити квиток, заповніть форму</h2>
+				</p>
+				<form method="POST" name="myform" onsubmit="return checkForm()">
+					<label>Ім'я</label><br>
+					<input type="text" id="name" placeholder="Введіть ім'я" class="input">
+					<label class="check" id="incName">Неправильний формат імені</label>
+					<br>
+					<label>Прізвище</label><br>
+					<input type="text" id="surname" placeholder="Введіть прізвище" class="input">
+					<label class="check" id="incSurname">Неправильний формат прізвища</label>
+					<br>
+					<label>Ел. пошта</label><br>
+					<input type="email" id="email" placeholder="example@domain.com" class="input">
+					<label class="check" id="incEmail">Неправильний формат ел. пошти</label>
+					<br>
+					<table>
+					<tr><td>
+						<label>Звідки:</label>
+					</td><td>
+						<select id="point_from" class="input">
+                        <option value="">Вінниця</option>
+                        <option value="">Дніпро</option>
+                        <option value="">Донецьк</option>
+                        <option value="">Житомир</option>
+                        <option value="">Запоріжжя</option>
+                        <option value="">Івано-Франківськ</option>
+                        <option value="">Київ</option>
+                        <option value="">Кропивницький</option>
+                        <option value="">Луганськ</option>
+                        <option value="">Луцьк</option>
+                        <option value="">Львів</option>
+                        <option value="">Миколаїв</option>
+                        <option value="">Одеса</option>
+                        <option value="">Полтава</option>
+                        <option value="">Рівне</option>
+                        <option value="">Суми</option>
+                        <option value="">Тернопіль</option>
+                        <option value="">Ужгород</option>
+                        <option value="">Харків</option>
+                        <option value="">Херсон</option>
+                        <option value="">Хмельницький</option>
+                        <option value="">Черкаси</option>
+                        <option value="">Чернівці</option>
+                        <option value="">Чернігів</option>
+                    	</select>
+                    </td></tr>
+                    <tr><td>
+                    	<label>Куди:</label>
+                    </td><td>
+						<select id="point_to" class="input">
+                        <option value="">Вінниця</option>
+                        <option value="">Дніпро</option>
+                        <option value="">Донецьк</option>
+                        <option value="">Житомир</option>
+                        <option value="">Запоріжжя</option>
+                        <option value="">Івано-Франківськ</option>
+                        <option value="">Київ</option>
+                        <option value="">Кропивницький</option>
+                        <option value="">Луганськ</option>
+                        <option value="">Луцьк</option>
+                        <option value="">Львів</option>
+                        <option value="">Миколаїв</option>
+                        <option value="">Одеса</option>
+                        <option value="">Полтава</option>
+                        <option value="">Рівне</option>
+                        <option value="">Суми</option>
+                        <option value="">Тернопіль</option>
+                        <option value="">Ужгород</option>
+                        <option value="">Харків</option>
+                        <option value="">Херсон</option>
+                        <option value="">Хмельницький</option>
+                        <option value="">Черкаси</option>
+                        <option value="">Чернівці</option>
+                        <option value="">Чернігів</option>
+                    	</select>
+                    </td></tr>
+                    <tr><td>
+                    	<label>Дата:</label>
+                    </td><td>
+                    	<input type="date" id="date" max="2019-12-07" class="input">
+                    </td></tr>
+                	</table>
+                	<p>
+                		<input type="radio" name="side" id="one_side">
+                		<label>В одну сторону</label><br>
+                		<input type="radio" name="side" id="two_side">
+                		<label>В дві сторони</label>
+                	</p>
+                	<p>
+                		<input type="checkbox" name="terms">
+                		<label>Я погоджуюсь з правилами користування</label>
+                	</p>
+                	<button id="buy">Замовити</button>
+				</form><br>
+			</div>
+
+		</div>
+		<div id="footer">Copyright © Bukhniy Yuriy</div>
+	</body>
+</html>
